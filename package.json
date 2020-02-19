@@ -1,0 +1,27 @@
+{
+  "name": "fastfeet",
+  "version": "0.0.1",
+  "description": "Esse desafio faz parte do Desafio Final, que é uma aplicação completa (Back-end, Front-end e Mobile) que é avaliada para emissão do Certificado do Bootcamp GoStack, por isso é fundamental que ele seja feito com muito empenho!",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucaspedronet/node-FastFeet.git"
+  },
+  "author": "Lucas Pedro Lopes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucaspedronet/node-FastFeet/issues"
+  },
+  "homepage": "https://github.com/lucaspedronet/node-FastFeet#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "sucrase": "^3.12.1"
+  }
+}
