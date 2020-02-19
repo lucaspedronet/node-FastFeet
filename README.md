@@ -9,7 +9,13 @@ Esse desafio faz parte do Desafio Final, que é uma aplicação completa (Back-e
 * <strong>Nodemon & Sucrase</strong>
 * <strong>Conceito do Docker</strong>
 * <strong>Configuração do Docker</strong>
+  <p>Comandos:</p>
+  <p>docker --name fastfeet -e POSTGRES_PASSWORD=minhasenha -p 5432:5432 -d postgres</p>
+
 * <strong>Sequelize & MVC</strong>
+  <p>npm i sequelize</p>
+  <p>npm i sequelize-cli --save-dev</p>
+
 * <strong>Eslint, Prettier & Editorconfig</strong>
 * <strong>Cofigurando Sequelize</strong>
 
