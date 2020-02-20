@@ -1,6 +1,6 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('destinatario', {
+    return queryInterface.createTable('recipients', {
       id: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -9,19 +9,7 @@ module.exports = {
       },
       cep: {
         type: Sequelize.STRING(7),
-        allowNull: false,
-      },
-      rua: {
-        type: Sequelize.STRING(50),
-        allowNull: false,
-      },
-      numero: {
-        type: Sequelize.STRING(50),
-        allowNull: false,
-      },
-      complemento: {
-        type: Sequelize.STRING(50),
-        allowNull: false,
+        allowNull: true,
       },
       cidade: {
         type: Sequelize.STRING(50),
@@ -30,6 +18,22 @@ module.exports = {
       estado: {
         type: Sequelize.STRING(50),
         allowNull: false,
+      },
+      setor: {
+        type: Sequelize.STRING(50),
+        allowNull: false,
+      },
+      rua: {
+        type: Sequelize.STRING(50),
+        allowNull: false,
+      },
+      numero: {
+        type: Sequelize.STRING(50),
+        allowNull: true,
+      },
+      complemento: {
+        type: Sequelize.STRING(50),
+        allowNull: true,
       },
       created_at: {
         type: Sequelize.DATE,
@@ -42,5 +46,5 @@ module.exports = {
     })
   },
 
-  down: (queryInterface) => queryInterface.dropTable('users')
+  down: (queryInterface) => queryInterface.dropTable('recipients')
 };
