@@ -5,46 +5,46 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         autoIncrement: true,
-        primaryKey: true,
+        primaryKey: true
       },
       cep: {
         type: Sequelize.STRING(7),
-        allowNull: true,
+        allowNull: true
       },
       cidade: {
         type: Sequelize.STRING(50),
-        allowNull: false,
+        allowNull: false
       },
       estado: {
         type: Sequelize.STRING(50),
-        allowNull: false,
+        allowNull: false
       },
       setor: {
         type: Sequelize.STRING(50),
-        allowNull: false,
+        allowNull: false
       },
       rua: {
         type: Sequelize.STRING(50),
-        allowNull: false,
+        allowNull: false
       },
       numero: {
         type: Sequelize.STRING(50),
-        allowNull: true,
+        allowNull: true
       },
       complemento: {
         type: Sequelize.STRING(50),
-        allowNull: true,
+        allowNull: true
       },
       created_at: {
         type: Sequelize.DATE,
-        allowNull: false,
+        allowNull: false
       },
       updated_at: {
         type: Sequelize.DATE,
-        allowNull: false,
+        allowNull: false
       }
-    })
+    });
   },
 
-  down: (queryInterface) => queryInterface.dropTable('recipients')
+  down: queryInterface => queryInterface.dropTable('recipients')
 };

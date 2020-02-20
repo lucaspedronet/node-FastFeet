@@ -5,43 +5,43 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         autoIncrement: true,
-        primaryKey: true,
+        primaryKey: true
       },
       name: {
         type: Sequelize.STRING(128),
         allowNull: false,
-        trim: true,
+        trim: true
       },
       email: {
         type: Sequelize.STRING(255),
         allowNull: false,
         unique: true,
-        trim: true,
+        trim: true
       },
       password_hash: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique: true,
+        unique: true
       },
       provider: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
-        allowNull: false,
+        allowNull: false
       },
       created_at: {
         // campos que irão armazena data/hora dos registros.
         type: Sequelize.DATE,
-        allowNull: false,
+        allowNull: false
       },
       updated_at: {
         // campo que fará o controle de version registra todas as alterações.
         type: Sequelize.DATE,
-        allowNull: false,
-      },
+        allowNull: false
+      }
     });
   },
 
   down: queryInterface => {
     return queryInterface.dropTable('users');
-  },
+  }
 };
