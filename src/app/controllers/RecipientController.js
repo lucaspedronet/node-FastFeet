@@ -1,4 +1,5 @@
 import Recipient from '../models/Recipients';
+import User from '../models/User';
 
 class RecipientController {
   async store(req, res) {
@@ -23,16 +24,20 @@ class RecipientController {
 
   async update(req, res) {
     const { name } = req.body;
-    const recipient = await Recipient.findByPk(req.userId);
+    const recipient = await Recipient.findOne({ where: { name } });
+    const { provider } = await User.findByPk(req.userId);
 
     if (!recipient) {
       return res.status(401).json({ error: 'Recipient already exists' });
     }
 
+    if (!provider)
+      return res.status(401).json({ error: 'Provider not permission' });
+
     if (name && name === recipient.name) {
       return res
         .status(401)
-        .json({ error: 'Recipient is name already exists' });
+        .json({ error: `Recipient is ${name} already exists` });
     }
     const { cep, cidade, estado, rua, setor, numero } = await recipient.update(
       req.body
