@@ -13,7 +13,13 @@ export default async (req, res, next) => {
   const [, token] = authHeader.split(' ');
 
   try {
-    const { id } = await promisify(jwt.verify)(token, authConfig.secret);
+    const { id, provider } = await promisify(jwt.verify)(
+      token,
+      authConfig.secret
+    );
+
+    if (!provider)
+      return res.status(400).json({ error: 'Provider not permission' });
 
     req.userId = id;
 
