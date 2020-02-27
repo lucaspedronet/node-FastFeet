@@ -7,6 +7,12 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true
       },
+      name: {
+        type: Sequelize.STRING(128),
+        allowNull: false,
+        unique: true,
+        trim: true
+      },
       cep: {
         type: Sequelize.STRING(7),
         allowNull: true

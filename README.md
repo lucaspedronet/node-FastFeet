@@ -26,7 +26,7 @@ Esse desafio faz parte do Desafio Final, que é uma aplicação completa (Back-e
   <p>? Where does your code run? Node</p>
   <p>? How would you like to define a style for your project? Use a popular style guide</p>
   <p>? Which style guide do you want to follow? Airbnb: https://github.com/airbnb/javascript</p>
-  <p>? What format do you want your config file to be in? JavaScript</p>
+  <p>_? What format do you want your config file to be in? JavaScript_</p>
   <br>
   <p>Apos ter realizado as configurações acima as seguintes libs:
   </p>
