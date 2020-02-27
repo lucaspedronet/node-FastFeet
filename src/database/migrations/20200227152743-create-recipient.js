@@ -7,31 +7,37 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true
       },
-      cep: {
+      name: {
+        type: Sequelize.STRING(128),
+        allowNull: false,
+        unique: true,
+        trim: true
+      },
+      zip_code: {
         type: Sequelize.STRING(7),
         allowNull: true
       },
-      cidade: {
+      city: {
         type: Sequelize.STRING(50),
         allowNull: false
       },
-      estado: {
+      state: {
         type: Sequelize.STRING(50),
         allowNull: false
       },
-      setor: {
+      sector: {
         type: Sequelize.STRING(50),
         allowNull: false
       },
-      rua: {
+      street: {
         type: Sequelize.STRING(50),
         allowNull: false
       },
-      numero: {
+      number: {
         type: Sequelize.STRING(50),
         allowNull: true
       },
-      complemento: {
+      complement: {
         type: Sequelize.STRING(50),
         allowNull: true
       },
